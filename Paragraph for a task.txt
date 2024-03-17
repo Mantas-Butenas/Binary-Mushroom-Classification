@@ -1,0 +1,19 @@
+For Binary classification task The Support Vector Machines method was chosen,
+as it was fit to a complex dataset containing more than 20 fungal features.
+
+Since the data wasn't numeric, I had to do one-hot encoding, so the model could be trained.
+
+I did Grid search with 5-fold cross-validation to get the best parameters for the model.
+
+Most of the parameters performed well, except {'C': 0.1, 'gamma': 'auto', 'kernel': 'poly'}, which
+only got the accuracy of 0.517772. 'C' value of 0.1 was too low because not a single model
+with this value reached the perfect accuracy.
+
+I tested the model with the best parameters ({'C': 1, 'gamma': 'scale', 'kernel': 'linear'}) and
+it got the perfect accuracy.
+
+There is an issue with data visualisation, because the dataset is highly-dimensional and non-numeric.
+I've tried different techniques (3d with plotly, DecisionTreeClassifier,  t-SNE,UMAP) to
+show the data in the linearly separable way, but couldn't do it, so I stuck with a scatter plot
+with the 2 most important features for X and Y axis. Clusters of data is visible, but not in
+linearly separable way.
