@@ -17,3 +17,6 @@ I've tried different techniques (3d with plotly, DecisionTreeClassifier,  t-SNE,
 show the data in the linearly separable way, but couldn't do it, so I stuck with a scatter plot
 with the 2 most important features for X and Y axis. Clusters of data is visible, but not in
 linearly separable way.
+
+The features with the most variance are: ring type and spore print color.
+
